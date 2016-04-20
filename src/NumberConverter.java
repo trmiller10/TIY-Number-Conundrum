@@ -5,13 +5,17 @@ public class NumberConverter {
     //creates a static method toText()that works with integer variable 'number' and returns the result as a string
     public static String toText(int number) {
 
-        if (number < 20) {
+        if (number < 10) {
             return handleSingles(number);
-        } else if (number >= 20 && number < 100) {
+        } else if (number <= 20 && number > 10){
+            return handleTeens(number);
+        }else if (number >= 20 && number < 100) {
             return handleTens(number);
         } else if (number >= 100 && number < 1000){
             return handleHundreds(number);
-        }
+        } /*else if (number >= 1000 & number < 10000){
+            return handleThousands(number);
+        }*/
 
         return "sdfgh";
     }
@@ -53,46 +57,53 @@ public class NumberConverter {
             case 9:
                 singleString = "nine";
                 break;
-            case 10:
-                singleString = "ten";
-                break;
-            case 11:
-                singleString = "eleven";
-                break;
-            case 12:
-                singleString = "twelve";
-                break;
-            case 13:
-                singleString = "thirteen";
-                break;
-            case 14:
-                singleString = "fourteen";
-                break;
-            case 15:
-                singleString = "fifteen";
-                break;
-            case 16:
-                singleString = "sixteen";
-                break;
-            case 17:
-                singleString = "seventeen";
-                break;
-            case 18:
-                singleString = "eighteen";
-                break;
-            case 19:
-                singleString = "nineteen";
-                break;
         }
         return singleString;
-
-
     }//public static String handleSingles(int number){
 
 
-    public static String handleTens(int number) {
+    public static String handleTeens(int number){
 
-        if(number < 10){
+        String teenString = "default";
+
+        switch(number) {
+            case 10:
+                teenString = "ten";
+                break;
+            case 11:
+                teenString = "eleven";
+                break;
+            case 12:
+                teenString = "twelve";
+                break;
+            case 13:
+                teenString = "thirteen";
+                break;
+            case 14:
+                teenString = "fourteen";
+                break;
+            case 15:
+                teenString = "fifteen";
+                break;
+            case 16:
+                teenString = "sixteen";
+                break;
+            case 17:
+                teenString = "seventeen";
+                break;
+            case 18:
+                teenString = "eighteen";
+                break;
+            case 19:
+                teenString = "nineteen";
+                break;
+        }
+        return teenString;
+    }
+
+    public static String handleTens(int number) {
+        //if pulled from handleHundreds() and is followed by a zero
+        if(number > 1 && number < 10){
             number = number * 10;
         }
 
@@ -100,9 +111,11 @@ public class NumberConverter {
         int singles = number % 10;
 
         String tenString = "default";
-
+        //if tens is followed by a zero
         if (singles == 0){
             switch (tens){
+                case 1: tenString = "ten ";
+                    break;
                 case 2: tenString = "twenty ";
                     break;
                 case 3: tenString = "thirty ";
@@ -121,9 +134,8 @@ public class NumberConverter {
                     break;
             } return tenString;
         }//if (singles == 0){
-
+        //if followed by non-zero single
         switch (tens) {
-
             case 0:
                 tenString = "";
                 break;
@@ -160,12 +172,17 @@ public class NumberConverter {
 
     public static String handleHundreds(int number){
         int hundreds = number / 100;
-        int tensSeperateDigit = number / 10 % 10;
+        int tensSeparateDigit = number / 10 % 10;
         int singles = number % 10;
+        if(tensSeparateDigit == 1){
+            number = 10 + singles;
+        }
+        String teenString = handleTeens(number);
+
 
         String hundredString = "default";
-
-        if (tensSeperateDigit == 0 && singles == 0){
+        //if hundreds followed by two zeroes
+        if (tensSeparateDigit == 0 && singles == 0){
             switch(hundreds){
                 case 1: hundredString = "one hundred";
                     break;
@@ -187,8 +204,8 @@ public class NumberConverter {
                     break;
 
             } return hundredString;
-
-        } else if (tensSeperateDigit == 0 && singles != 0){
+        //if hundreds followed by tens=0 and singles=nonzero
+        } else if (tensSeparateDigit == 0 && singles != 0){
             switch(hundreds){
                 case 1: hundredString = "one hundred and " + handleSingles(singles);
                     break;
@@ -210,54 +227,96 @@ public class NumberConverter {
                     break;
 
             } return hundredString;
-        } else if (tensSeperateDigit != 0 && singles == 0){
+            //if hundreds is followed by tens=nonzero and singles=0
+        } else if (tensSeparateDigit == 1){
             switch(hundreds){
-                case 1: hundredString = "one hundred and " + handleTens(tensSeperateDigit);
+                case 1: hundredString = "one hundred and " + teenString;
                     break;
-                case 2: hundredString = "two hundred and " + handleTens(tensSeperateDigit);
+                case 2: hundredString = "two hundred and " + teenString;
                     break;
-                case 3: hundredString = "three hundred and " + handleTens(tensSeperateDigit);
+                case 3: hundredString = "three hundred and " + teenString;
                     break;
-                case 4: hundredString = "four hundred and " + handleTens(tensSeperateDigit);
+                case 4: hundredString = "four hundred and " + teenString;
                     break;
-                case 5: hundredString = "five hundred and " + handleTens(tensSeperateDigit);
+                case 5: hundredString = "five hundred and " + teenString;
                     break;
-                case 6: hundredString = "six hundred and " + handleTens(tensSeperateDigit);
+                case 6: hundredString = "six hundred and " + teenString;
                     break;
-                case 7: hundredString = "seven hundred and " + handleTens(tensSeperateDigit);
+                case 7: hundredString = "seven hundred and " + teenString;
                     break;
-                case 8: hundredString = "eight hundred and " + handleTens(tensSeperateDigit);
+                case 8: hundredString = "eight hundred and " + teenString;
                     break;
-                case 9: hundredString = "nine hundred and " + handleTens(tensSeperateDigit);
+                case 9: hundredString = "nine hundred and " + teenString;
+                    break;
+            } return hundredString;
+        }
+
+        else if (tensSeparateDigit != 0 && singles == 0){
+            switch(hundreds){
+                case 1: hundredString = "one hundred and " + handleTens(tensSeparateDigit);
+                    break;
+                case 2: hundredString = "two hundred and " + handleTens(tensSeparateDigit);
+                    break;
+                case 3: hundredString = "three hundred and " + handleTens(tensSeparateDigit);
+                    break;
+                case 4: hundredString = "four hundred and " + handleTens(tensSeparateDigit);
+                    break;
+                case 5: hundredString = "five hundred and " + handleTens(tensSeparateDigit);
+                    break;
+                case 6: hundredString = "six hundred and " + handleTens(tensSeparateDigit);
+                    break;
+                case 7: hundredString = "seven hundred and " + handleTens(tensSeparateDigit);
+                    break;
+                case 8: hundredString = "eight hundred and " + handleTens(tensSeparateDigit);
+                    break;
+                case 9: hundredString = "nine hundred and " + handleTens(tensSeparateDigit);
                     break;
 
             } return hundredString;
         }
-
+        //if hundreds is followed by nonzero tens and singles
         switch(hundreds){
-            case 1: hundredString = "one hundred and "  + handleTens(tensSeperateDigit) + handleSingles(singles);
+            case 1: hundredString = "one hundred and "  + handleTens(tensSeparateDigit) + handleSingles(singles);
                 break;
-            case 2: hundredString = "two hundred and "  + handleTens(tensSeperateDigit) + handleSingles(singles);
+            case 2: hundredString = "two hundred and "  + handleTens(tensSeparateDigit) + handleSingles(singles);
                 break;
-            case 3: hundredString = "three hundred and " + handleTens(tensSeperateDigit) + handleSingles(singles);
+            case 3: hundredString = "three hundred and " + handleTens(tensSeparateDigit) + handleSingles(singles);
                 break;
-            case 4: hundredString = "four hundred and " + handleTens(tensSeperateDigit) + handleSingles(singles);
+            case 4: hundredString = "four hundred and " + handleTens(tensSeparateDigit) + handleSingles(singles);
                 break;
-            case 5: hundredString = "five hundred and " + handleTens(tensSeperateDigit) + handleSingles(singles);
+            case 5: hundredString = "five hundred and " + handleTens(tensSeparateDigit) + handleSingles(singles);
                 break;
-            case 6: hundredString = "six hundred and "  + handleTens(tensSeperateDigit) + handleSingles(singles);
+            case 6: hundredString = "six hundred and "  + handleTens(tensSeparateDigit) + handleSingles(singles);
                 break;
-            case 7: hundredString = "seven hundred and " + handleTens(tensSeperateDigit) + handleSingles(singles);
+            case 7: hundredString = "seven hundred and " + handleTens(tensSeparateDigit) + handleSingles(singles);
                 break;
-            case 8: hundredString = "eight hundred and " + handleTens(tensSeperateDigit) + handleSingles(singles);
+            case 8: hundredString = "eight hundred and " + handleTens(tensSeparateDigit) + handleSingles(singles);
                 break;
-            case 9: hundredString = "nine hundred and " + handleTens(tensSeperateDigit) + handleSingles(singles);
+            case 9: hundredString = "nine hundred and " + handleTens(tensSeparateDigit) + handleSingles(singles);
                 break;
 
         }
         return hundredString;
 
-    } //public static String handleHundreds(number){
+    } //public static String handleHundreds(int number){
+
+ /*   public static String handleThousands(int number){
+        int thousands = number / 1000;
+        int hundredsSeparateDigit = number / 100 % 10;
+
+        String thousandString = "default";
+
+        switch(thousands){
+            case 1: thousandString = "one thousand";
+                break;
+        }
+        return thousandString;
+
+        switch(thousands){
+            case 1: thousandString = "one thousand " +
+        }
+
+    } */
 
   /*  public static String handleSecondDigit(int number){
 

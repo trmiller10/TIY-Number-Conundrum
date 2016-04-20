@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f963855-9e4a-4217-b41d-e63ef94e1fac" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TIY-Number-Conundrum/Main.class" afterPath="$PROJECT_DIR$/out/production/TIY-Number-Conundrum/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NumberConverter.java" afterPath="$PROJECT_DIR$/src/NumberConverter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/NumberConverterTest.java" afterPath="$PROJECT_DIR$/test/NumberConverterTest.java" />
@@ -26,20 +28,20 @@
     <favorites_list name="TIY-Number-Conundrum" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.48711112">
+    <splitter split-orientation="horizontal" split-proportion="0.81244445">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="NumberConverter.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="NumberConverter.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/NumberConverter.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="67">
-                  <caret line="105" column="44" selection-start-line="105" selection-start-column="44" selection-end-line="105" selection-end-column="44" />
+                <state relative-caret-position="715">
+                  <caret line="250" column="35" selection-start-line="250" selection-start-column="35" selection-end-line="250" selection-end-column="35" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Main.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="90">
@@ -56,8 +58,8 @@
           <file leaf-file-name="NumberConverterTest.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test/NumberConverterTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="157">
-                  <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+                <state relative-caret-position="60">
+                  <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -94,8 +96,8 @@
         <option value="$PROJECT_DIR$/test/NumberConverterTest2.java" />
         <option value="$PROJECT_DIR$/src/LessThanTwenty.java" />
         <option value="$PROJECT_DIR$/test/NumberConverterTest.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/NumberConverter.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -693,8 +695,8 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.NumberConverterTest.whenIntThenString" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.NumberConverterTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.NumberConverterTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.NumberConverterTest.whenIntThenString" />
         <item index="3" class="java.lang.String" itemvalue="Application.example" />
         <item index="4" class="java.lang.String" itemvalue="Application.SwitchDemo2" />
       </list>
@@ -711,17 +713,11 @@
       <option name="presentableId" value="Default" />
       <updated>1460999410357</updated>
       <workItem from="1460999413951" duration="15280000" />
-      <workItem from="1461088276981" duration="17507000" />
+      <workItem from="1461088276981" duration="21660000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="NumberConverterTest - 2016.04.19 at 14h 10m 13s.xml">
-      <configuration name="NumberConverterTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="NumberConverterTest - 2016.04.19 at 14h 39m 48s.xml">
-      <configuration name="NumberConverterTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="NumberConverterTest - 2016.04.19 at 15h 03m 29s.xml">
       <configuration name="NumberConverterTest" configurationId="JUnit" />
     </history-entry>
@@ -729,6 +725,12 @@
       <configuration name="NumberConverterTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="NumberConverterTest - 2016.04.19 at 15h 05m 25s.xml">
+      <configuration name="NumberConverterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NumberConverterTest - 2016.04.20 at 14h 25m 00s.xml">
+      <configuration name="NumberConverterTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NumberConverterTest - 2016.04.20 at 14h 29m 40s.xml">
       <configuration name="NumberConverterTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="NumberConverterTest_whenIntThenString - 2016.04.20 at 14h 05m 58s.xml">
@@ -748,7 +750,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32787000" />
+    <option name="totallyTimeSpent" value="36940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1366" height="682" extended-state="6" />
@@ -762,7 +764,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2881356" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2881356" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -789,42 +791,72 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/NumberConverter.java</url>
-          <line>124</line>
+          <line>137</line>
           <properties />
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/NumberConverter.java</url>
-          <line>245</line>
-          <properties />
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/NumberConverter.java</url>
-          <line>94</line>
+          <line>105</line>
           <properties />
           <option name="timeStamp" value="48" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/NumberConverter.java</url>
+          <line>184</line>
+          <properties />
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/NumberConverter.java</url>
+          <line>207</line>
+          <properties />
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/NumberConverter.java</url>
+          <line>230</line>
+          <properties />
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/NumberConverter.java</url>
+          <line>277</line>
+          <properties />
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/NumberConverter.java</url>
-          <line>92</line>
+          <line>103</line>
           <properties class="NumberConverter" method="handleTens" />
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/NumberConverter.java</url>
-          <line>160</line>
+          <line>172</line>
           <properties class="NumberConverter" method="handleHundreds" />
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/NumberConverter.java</url>
-          <line>261</line>
+          <line>320</line>
           <properties class="NumberConverter" />
           <option name="timeStamp" value="47" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/NumberConverter.java</url>
+          <line>22</line>
+          <properties class="NumberConverter" method="handleSingles" />
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/NumberConverter.java</url>
+          <line>64</line>
+          <properties class="NumberConverter" method="handleTeens" />
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="51" />
+      <option name="time" value="57" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -910,29 +942,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/test/NumberConverterTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="53" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
-          <folding />
+        <state relative-caret-position="60">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/NumberConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="105" column="44" selection-start-line="105" selection-start-column="44" selection-end-line="105" selection-end-column="44" />
+        <state relative-caret-position="715">
+          <caret line="250" column="35" selection-start-line="250" selection-start-column="35" selection-end-line="250" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/NumberConverterTest.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="6" column="53" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
