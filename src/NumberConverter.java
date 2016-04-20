@@ -13,9 +13,9 @@ public class NumberConverter {
             return handleTens(number);
         } else if (number >= 100 && number < 1000){
             return handleHundreds(number);
-        } /*else if (number >= 1000 & number < 10000){
+        } else if (number >= 1000 & number < 10000){
             return handleThousands(number);
-        }*/
+        }
 
         return "sdfgh";
     }
@@ -111,6 +111,7 @@ public class NumberConverter {
         int singles = number % 10;
 
         String tenString = "default";
+
         //if tens is followed by a zero
         if (singles == 0){
             switch (tens){
@@ -172,6 +173,9 @@ public class NumberConverter {
 
     public static String handleHundreds(int number){
         int hundreds = number / 100;
+        if(hundreds == 0){
+            return handleTens(number);
+        }
         int tensSeparateDigit = number / 10 % 10;
         int singles = number % 10;
         if(tensSeparateDigit == 1){
@@ -181,6 +185,7 @@ public class NumberConverter {
 
 
         String hundredString = "default";
+
         //if hundreds followed by two zeroes
         if (tensSeparateDigit == 0 && singles == 0){
             switch(hundreds){
@@ -274,7 +279,7 @@ public class NumberConverter {
 
             } return hundredString;
         }
-        //if hundreds is followed by nonzero tens and singles
+        //if hundreds is followed by nonzero, nonteen tens and singles
         switch(hundreds){
             case 1: hundredString = "one hundred and "  + handleTens(tensSeparateDigit) + handleSingles(singles);
                 break;
@@ -300,23 +305,56 @@ public class NumberConverter {
 
     } //public static String handleHundreds(int number){
 
- /*   public static String handleThousands(int number){
-        int thousands = number / 1000;
-        int hundredsSeparateDigit = number / 100 % 10;
+   public static String handleThousands(int number){
 
-        String thousandString = "default";
+       int thousands = number / 1000;
+       int hundreds = number % 1000;
 
-        switch(thousands){
-            case 1: thousandString = "one thousand";
-                break;
-        }
+       String thousandString = "default";
+
+       switch(thousands){
+           case 1: thousandString = handleSingles(thousands) + " thousand "
+ + handleHundreds(hundreds);
+       } return thousandString;
+
+
+
+
+       /*  int thousands = number / 1000;
+       int hundredsSeparateDigit = number / 100 % 10;
+       int tensSeparateDigit = number / 10 % 10;
+       int singles = number % 10;
+
+       if(tensSeparateDigit == 1){
+           number = 10 + singles;
+       }
+       String teenString = handleTeens(number);
+
+
+       //if thousands is followed by zero hundreds and tens and nonzero singles
+       if (hundredsSeparateDigit == 0 && tensSeparateDigit == 0){
+           switch(thousands){
+               case 1: thousandString = "one thousand and " + handleSingles(singles);
+                   break;
+           }
+       }
+       //if thousands is followed by zero hundreds and nonzero tens and singles
+       else if (hundredsSeparateDigit == 0 && tensSeparateDigit != 0 && tensSeparateDigit != 1){
+           switch (thousands){
+               case 1: thousandString = "one thousand " + handleTens(tensSeparateDigit) + handleSingles(singles);
+                   break;
+           }
+       }
+       //if thousands is followed by zero hundreds and teens
+       else if (hundredsSeparateDigit == 0 && tensSeparateDigit == 1){
+           switch (thousands){
+               case 1: thousandString = "one thousand " + teenString;
+                   break;
+           }
+       }
         return thousandString;
-
-        switch(thousands){
-            case 1: thousandString = "one thousand " +
-        }
-
-    } */
+*/
+    }
 
   /*  public static String handleSecondDigit(int number){
 

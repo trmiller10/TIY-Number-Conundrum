@@ -9,14 +9,14 @@ public class NumberConverterTest {
     /**
      * Given NumberConverter, when integer 0 is input, then "zero" is returned.
      */
- /*   public void whenInteger0ThenZero(){
+    public void whenInteger0ThenZero(){
         //Arrange
 
         //Act
         String zero = NumberConverter.toText(0);
         //Assert
         assertThat(zero, is("zero"));
-    }*/
+    }
 
 
     /**
