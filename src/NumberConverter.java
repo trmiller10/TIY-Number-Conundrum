@@ -329,15 +329,29 @@ public class NumberConverter {
        int hundreds = number % 1000;
 
        String thousandString = "thousand default";
-       if(thousands >= 1 && thousands < 10){
+       if (thousands >= 1 && thousands < 10) {
            thousandString = handleSingles(thousands) + "thousand "
                    + handleHundreds(hundreds);
-       } else if(thousands >= 10 && thousands < 20){
-               thousandString = handleTens(thousands) + "thousand "
-                       + handleHundreds(hundreds);
+       } else if (thousands >= 10 && thousands < 20) {
+           thousandString = handleTeens(thousands) + "thousand "
+                   + handleHundreds(hundreds);
+       } else if (thousands >= 20 && thousands < 100) {
+           thousandString = handleTens(thousands) + "thousand "
+                   + handleHundreds(hundreds);
+       } else if (thousands >= 100 && thousands < 1000) {
+           thousandString = handleHundreds(thousands) + "thousand "
+                   + handleHundreds(hundreds);
        }
+
        return thousandString;
    }
+
+} //public class NumberConverter {
+
+
+
+
+
    /* public static String handleTenThousands(int number) {
 
         int thousands = number / 1000;
@@ -410,4 +424,4 @@ public class NumberConverter {
 
     }*/
 
-} //public class NumberConverter {
+

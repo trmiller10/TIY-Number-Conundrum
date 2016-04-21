@@ -501,12 +501,12 @@ public class NumberConverterTest {
         //Assert
         assertThat(tenThousandOneHundredEleven, is("ten thousand one hundred eleven "));
     }
-    
+
     @Test
     /**
      * Given: NumberConverter
      * When: Integer 11000 is input
-     * Then: "eleven thousand" is returned
+     * Then: "eleven thousand " is returned
      */
     public void whenInteger11000ThenElevenThousand() {
         //Arrange
@@ -515,6 +515,146 @@ public class NumberConverterTest {
         String elevenThousand = NumberConverter.toText(11000);
         //Assert
         assertThat(elevenThousand, is("eleven thousand "));
+    }
+    @Test
+    /**
+     * Given: NumberConverter
+     * When: Integer 11001 is input
+     * Then: "eleven thousand one " is returned
+     */
+    public void whenInteger11001ThenElevenThousandOne() {
+        //Arrange
+
+        //Act
+        String elevenThousandOne = NumberConverter.toText(11001);
+        //Assert
+        assertThat(elevenThousandOne, is("eleven thousand one "));
+    }
+    @Test
+    /**
+     * Given: NumberConverter
+     * When: Integer 11011 is input
+     * Then: "eleven thousand eleven " is returned
+     */
+    public void whenInteger11011ThenElevenThousandEleven() {
+        //Arrange
+
+        //Act
+        String elevenThousandEleven = NumberConverter.toText(11011);
+        //Assert
+        assertThat(elevenThousandEleven, is("eleven thousand eleven "));
+    }
+    @Test
+    /**
+     * Given: NumberConverter
+     * When: Integer 11111 is input
+     * Then: "eleven thousand one hundred eleven" is returned
+     */
+    public void whenInteger11111ThenElevenThousandOneHundredEleven() {
+        //Arrange
+
+        //Act
+        String elevenThousandOneHundredEleven = NumberConverter.toText(11111);
+        //Assert
+        assertThat(elevenThousandOneHundredEleven, is("eleven thousand one hundred eleven "));
+    }
+    @Test
+    /**
+     * Given: NumberConverter
+     * When: Integer 58020 is input
+     * Then: "fifty eight thousand twenty " is returned
+     */
+    public void whenInteger58020ThenFiftyEightThousandTwenty() {
+        //Arrange
+
+        //Act
+        String fiftyEightThousandTwenty = NumberConverter.toText(58020);
+        //Assert
+        assertThat(fiftyEightThousandTwenty, is("fifty eight thousand twenty "));
+    }
+    @Test
+    /**
+     * Given: NumberConverter
+     * When: Integer 100000 is input
+     * Then: "one hundred thousand " is returned
+     */
+    public void whenInteger100000ThenOneHundredThousand() {
+        //Arrange
+
+        //Act
+        String oneHundredThousand = NumberConverter.toText(100000);
+        //Assert
+        assertThat(oneHundredThousand, is("one hundred thousand "));
+    }
+    @Test
+    /**
+     * Given: NumberConverter
+     * When: Integer 100001 is input
+     * Then: "one hundred thousand one" is returned
+     */
+    public void whenInteger100001ThenOneHundredThousandOne() {
+        //Arrange
+
+        //Act
+        String oneHundredThousandOne = NumberConverter.toText(100001);
+        //Assert
+        assertThat(oneHundredThousandOne, is("one hundred thousand one "));
+    }
+    @Test
+    /**
+     * Given: NumberConverter
+     * When: Integer 100110 is input
+     * Then: "one hundred thousand one hundred ten" is returned
+     */
+    public void whenInteger100110ThenOneHundredThousandOneHundredTen() {
+        //Arrange
+
+        //Act
+        String oneHundredThousandOneHundredTen = NumberConverter.toText(100110);
+        //Assert
+        assertThat(oneHundredThousandOneHundredTen, is("one hundred thousand one hundred ten "));
+    }
+    @Test
+    /**
+     * Given: NumberConverter
+     * When: Integer 101000 is input
+     * Then: "one hundred one thousand " is returned
+     */
+    public void whenInteger101000ThenOneHundredOneThousand() {
+        //Arrange
+
+        //Act
+        String oneHundredOneThousand = NumberConverter.toText(101000);
+        //Assert
+        assertThat(oneHundredOneThousand, is("one hundred one thousand "));
+    }
+    @Test
+    /**
+     * Given: NumberConverter
+     * When: Integer 111111 is input
+     * Then: "one hundred eleven thousand one hundred eleven " is returned
+     */
+    public void whenInteger111111ThenOneHundredElevenThousandOneHundredEleven() {
+        //Arrange
+
+        //Act
+        String oneHundredElevenThousandOneHundredEleven = NumberConverter.toText(111111);
+        //Assert
+        assertThat(oneHundredElevenThousandOneHundredEleven, is("one hundred eleven thousand one hundred eleven "));
+    }
+    @Test
+    /**
+     * Given: NumberConverter
+     * When: Integer 999909 is input
+     * Then: "nine hundred ninety nine thousand nine hundred nine " is returned
+     */
+    public void whenInteger999909ThenNineHundredNineThousandNineHundredNine() {
+        //Arrange
+
+        //Act
+        String nineHundredNineThousandNineHundredNine = NumberConverter.toText(999909);
+        //Assert
+        assertThat(nineHundredNineThousandNineHundredNine, is("nine hundred ninety nine thousand nine hundred nine "));
     }
 }
 
