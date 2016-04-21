@@ -7,23 +7,24 @@ public class NumberConverter {
 
         if (number < 10) {
             return handleSingles(number);
-        } else if (number <= 20 && number > 10){
+        } else if (number >= 10 && number < 20) {
             return handleTeens(number);
-        }else if (number >= 20 && number < 100) {
+        } else if (number >= 20 && number < 100) {
             return handleTens(number);
-        } else if (number >= 100 && number < 1000){
+        } else if (number >= 100 && number < 1000) {
             return handleHundreds(number);
-        } else if (number >= 1000 & number < 10000){
+        } else if (number >= 1000 && number < 10000) {
             return handleThousands(number);
+        } else if (number >= 10000 && number < 100000) {
+            return handleTenThousands(number);
         }
-
         return "sdfgh";
     }
 
     public static String handleSingles(int number) {
 
 
-        String singleString = "default";
+        String singleString = "singles default";
 
         switch (number) {
             case 0:
@@ -31,31 +32,31 @@ public class NumberConverter {
                 //ends case program flow
                 break;
             case 1:
-                singleString = "one";
+                singleString = "one ";
                 break;
             case 2:
-                singleString = "two";
+                singleString = "two ";
                 break;
             case 3:
-                singleString = "three";
+                singleString = "three ";
                 break;
             case 4:
-                singleString = "four";
+                singleString = "four ";
                 break;
             case 5:
-                singleString = "five";
+                singleString = "five ";
                 break;
             case 6:
-                singleString = "six";
+                singleString = "six ";
                 break;
             case 7:
-                singleString = "seven";
+                singleString = "seven ";
                 break;
             case 8:
-                singleString = "eight";
+                singleString = "eight ";
                 break;
             case 9:
-                singleString = "nine";
+                singleString = "nine ";
                 break;
         }
         return singleString;
@@ -64,38 +65,38 @@ public class NumberConverter {
 
     public static String handleTeens(int number){
 
-        String teenString = "default";
+        String teenString = "teen default";
 
         switch(number) {
             case 10:
-                teenString = "ten";
+                teenString = "ten ";
                 break;
             case 11:
-                teenString = "eleven";
+                teenString = "eleven ";
                 break;
             case 12:
-                teenString = "twelve";
+                teenString = "twelve ";
                 break;
             case 13:
-                teenString = "thirteen";
+                teenString = "thirteen ";
                 break;
             case 14:
-                teenString = "fourteen";
+                teenString = "fourteen ";
                 break;
             case 15:
-                teenString = "fifteen";
+                teenString = "fifteen ";
                 break;
             case 16:
-                teenString = "sixteen";
+                teenString = "sixteen ";
                 break;
             case 17:
-                teenString = "seventeen";
+                teenString = "seventeen ";
                 break;
             case 18:
-                teenString = "eighteen";
+                teenString = "eighteen ";
                 break;
             case 19:
-                teenString = "nineteen";
+                teenString = "nineteen ";
                 break;
         }
         return teenString;
@@ -106,9 +107,19 @@ public class NumberConverter {
         if(number > 1 && number < 10){
             number = number * 10;
         }
+        if(number == 0){
+            return handleSingles(number);
+        }
+        if(number >= 11 && number < 20){
+            return handleTeens(number);
+        }
 
         int tens = number / 10;
         int singles = number % 10;
+
+        if(tens == 0){
+            return handleSingles(number);
+        }
 
         String tenString = "default";
 
@@ -184,28 +195,28 @@ public class NumberConverter {
         String teenString = handleTeens(number);
 
 
-        String hundredString = "default";
+        String hundredString = "hundred default";
 
         //if hundreds followed by two zeroes
         if (tensSeparateDigit == 0 && singles == 0){
             switch(hundreds){
-                case 1: hundredString = "one hundred";
+                case 1: hundredString = "one hundred ";
                     break;
-                case 2: hundredString = "two hundred";
+                case 2: hundredString = "two hundred ";
                     break;
-                case 3: hundredString = "three hundred";
+                case 3: hundredString = "three hundred ";
                     break;
-                case 4: hundredString = "four hundred";
+                case 4: hundredString = "four hundred ";
                     break;
-                case 5: hundredString = "five hundred";
+                case 5: hundredString = "five hundred ";
                     break;
-                case 6: hundredString = "six hundred";
+                case 6: hundredString = "six hundred ";
                     break;
-                case 7: hundredString = "seven hundred";
+                case 7: hundredString = "seven hundred ";
                     break;
-                case 8: hundredString = "eight hundred";
+                case 8: hundredString = "eight hundred ";
                     break;
-                case 9: hundredString = "nine hundred";
+                case 9: hundredString = "nine hundred ";
                     break;
 
             } return hundredString;
@@ -305,17 +316,74 @@ public class NumberConverter {
 
     } //public static String handleHundreds(int number){
 
-   public static String handleThousands(int number){
+   public static String handleThousands(int number) {
 
        int thousands = number / 1000;
        int hundreds = number % 1000;
 
-       String thousandString = "default";
+       String thousandString = "thousand default";
 
-       switch(thousands){
-           case 1: thousandString = handleSingles(thousands) + " thousand "
- + handleHundreds(hundreds);
-       } return thousandString;
+       switch (thousands) {
+           case 1:case 2:case 3:case 4:
+               thousandString = handleSingles(thousands) + "thousand "
+                       + handleHundreds(hundreds);
+               break;
+           /*case 2:
+               thousandString = handleSingles(thousands) + " thousand "
+                       + handleHundreds(hundreds);
+               break;
+           case 3:
+               thousandString = handleSingles(thousands) + " thousand "
+                       + handleHundreds(hundreds);
+               break;
+           case 4:
+               thousandString = handleSingles(thousands) + " thousand "
+                       + handleHundreds(hundreds);
+               break;
+           case 5:
+               thousandString = handleSingles(thousands) + " thousand "
+                       + handleHundreds(hundreds);
+               break;
+           case 6:
+               thousandString = handleSingles(thousands) + " thousand "
+                       + handleHundreds(hundreds);
+               break;
+           case 7:
+               thousandString = handleSingles(thousands) + " thousand "
+                       + handleHundreds(hundreds);
+               break;
+           case 8:
+               thousandString = handleSingles(thousands) + " thousand "
+                       + handleHundreds(hundreds);
+               break;
+           case 9:
+               thousandString = handleSingles(thousands) + " thousand "
+                       + handleHundreds(hundreds);
+               break;*/
+       }
+       return thousandString;
+   }
+    public static String handleTenThousands(int number) {
+
+        int thousands = number / 1000;
+        int hundreds = number % 1000;
+
+        String thousandString = "ten thousand default";
+
+        switch (thousands) {
+            case 10: thousandString = handleTens(thousands) + "thousand " +
+                    handleHundreds(hundreds);
+                break;
+            case 11: thousandString = handleTens(thousands) + "thousand " +
+                    handleHundreds(hundreds);
+                break;
+            case 12:
+                thousandString = handleTeens(thousands) + "thousand "
+                        + handleHundreds(hundreds);
+                break;
+        }
+        return thousandString;
+    }
 
 
 
@@ -354,7 +422,7 @@ public class NumberConverter {
        }
         return thousandString;
 */
-    }
+
 
   /*  public static String handleSecondDigit(int number){
 
