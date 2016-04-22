@@ -656,6 +656,133 @@ public class NumberConverterTest {
         //Assert
         assertThat(nineHundredNineThousandNineHundredNine, is("nine hundred ninety nine thousand nine hundred nine "));
     }
+    @Test
+    /**
+     * Given: NumberConverter
+     * When: Integer 1000000 is input
+     * Then: "one million " is returned
+     */
+    public void whenInteger1000000ThenOneMillion() {
+        //Arrange
+
+        //Act
+        String oneMillion = NumberConverter.toText(1000000);
+        //Assert
+        assertThat(oneMillion, is("one million "));
+    }
+    @Test
+    /**
+     * Given: NumberConverter
+     * When: Integer 2200000 is input
+     * Then: "two million two hundred thousand" is returned
+     */
+    public void whenInteger2200000ThenTwoMillionTwoHundredThousand() {
+        //Arrange
+
+        //Act
+        String twoMillionTwoHundredThousand = NumberConverter.toText(2200000);
+        //Assert
+        assertThat(twoMillionTwoHundredThousand, is("two million two hundred thousand "));
+    }
+    @Test
+    /**
+     * Given: NumberConverter
+     * When: Integer 3330000 is input
+     * Then: "three million three hundred thirty three thousand" is returned
+     */
+    public void whenInteger3330000ThenThreeMillionThreeHundredThirtyThousand() {
+        //Arrange
+
+        //Act
+        String threeMillionThreeHundredThirtyThousand = NumberConverter.toText(3330000);
+        //Assert
+        assertThat(threeMillionThreeHundredThirtyThousand, is("three million three hundred thirty thousand "));
+    }
+    @Test
+    /**
+     * Given: NumberConverter
+     * When: Integer 4444000 is input
+     * Then: "four million four hundred forty four thousand" is returned
+     */
+    public void whenInteger4444000ThenFourMillionFourHundredFortyFourThousand() {
+        //Arrange
+
+        //Act
+        String fourMillionFourHundredFortyFourThousand = NumberConverter.toText(4444000);
+        //Assert
+        assertThat(fourMillionFourHundredFortyFourThousand, is("four million four hundred forty four thousand "));
+    }
+    @Test
+    /**
+     * Given: NumberConverter
+     * When: Integer 5555500 is input
+     * Then: "five million five hundred fifty five thousand five hundred" is returned
+     */
+    public void whenInteger5555500ThenFiveMillionFiveHundredFiftyFiveThousandFiveHundred() {
+        //Arrange
+
+        //Act
+        String fiveMillionFiveHundredFiftyFiveThousandFiveHundred = NumberConverter.toText(5555500);
+        //Assert
+        assertThat(fiveMillionFiveHundredFiftyFiveThousandFiveHundred, is("five million five hundred fifty five thousand five hundred "));
+    }
+    @Test
+    /**
+     * Given: NumberConverter
+     * When: Integer 6666660 is input
+     * Then: "six million six hundred sixty six thousand six hundred sixty" is returned
+     */
+    public void whenInteger6666660ThenSixMillionSixHundredSixtySixThousandSixHundredSixty() {
+        //Arrange
+
+        //Act
+        String sixMillionSixHundredSixtySixThousandSixHundredSixtySix = NumberConverter.toText(6666660);
+        //Assert
+        assertThat(sixMillionSixHundredSixtySixThousandSixHundredSixtySix, is("six million six hundred sixty six thousand six hundred sixty "));
+    }
+    @Test
+    /**
+     * Given: NumberConverter
+     * When: Integer 7777777 is input
+     * Then: "seven million seven hundred seventy seven thousand seven hundred seventy seven" is returned
+     */
+    public void whenInteger7777777ThenSevenMillionSevenHundredSeventySevebThousandSevenHundredSeventySeven() {
+        //Arrange
+
+        //Act
+        String sevenMillionSevenHundredSeventySevebThousandSevenHundredSeventySeven = NumberConverter.toText(7777777);
+        //Assert
+        assertThat(sevenMillionSevenHundredSeventySevebThousandSevenHundredSeventySeven, is("seven million seven hundred seventy seven thousand seven hundred seventy seven "));
+    }
+    @Test
+    /**
+     * Given: NumberConverter
+     * When: Integer 10000000 is input
+     * Then: "ten million " is returned
+     */
+    public void whenInteger10000000ThenTenMillion() {
+        //Arrange
+
+        //Act
+        String tenMillion = NumberConverter.toText(10000000);
+        //Assert
+        assertThat(tenMillion, is("ten million "));
+    }
+    @Test
+    /**
+     * Given: NumberConverter
+     * When: Integer 100000000 is input
+     * Then: "ten million " is returned
+     */
+    public void whenInteger100000000ThenOneHundredMillion() {
+        //Arrange
+
+        //Act
+        String oneHundredMillion = NumberConverter.toText(100000000);
+        //Assert
+        assertThat(oneHundredMillion, is("one hundred million "));
+    }
+
 }
 
 

@@ -15,7 +15,10 @@ public class NumberConverter {
             return handleHundreds(number);
         } else if (number >= 1000 && number < 1000000) {
             return handleThousands(number);
+        } else if (number >= 1000000 && number < 1000000000) {
+            return handleMillions(number);
         }
+
         return "sdfgh";
     }
 
@@ -341,10 +344,37 @@ public class NumberConverter {
        } else if (thousands >= 100 && thousands < 1000) {
            thousandString = handleHundreds(thousands) + "thousand "
                    + handleHundreds(hundreds);
+       } else if (thousands == 0){
+           thousandString = "";
        }
 
        return thousandString;
    }
+
+
+    public static String handleMillions(int number) {
+
+        int millions = number / 1000000;
+        int thousands = number % 1000000;
+       // int hundreds = % 1000;
+
+        String millionString = "million default";
+        if(millions >= 1 && millions < 10) {
+            millionString = handleSingles(millions) + "million "
+                    + handleThousands(thousands);
+        } else if (millions >= 10 && millions < 20) {
+            millionString = handleTeens(millions) + "million "
+                    + handleThousands(thousands);
+        } else if (millions >= 20 && millions < 100) {
+            millionString = handleTens(millions) + "million "
+                    + handleThousands(thousands);
+        } else if (millions >= 100 && millions < 1000) {
+            millionString = handleHundreds(millions) + "million "
+                    + handleThousands(thousands);
+        }
+
+        return millionString;
+    }
 
 } //public class NumberConverter {
 

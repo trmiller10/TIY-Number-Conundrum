@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args){
 
 
-        System.out.println(NumberConverter.toText(111111));
+        System.out.println(NumberConverter.toText(1000000));
 
     }
 
